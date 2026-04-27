@@ -328,8 +328,6 @@ namespace nvilidar
 	//================================other interface for network=============================================
 	bool LidarProcess::LidarSetNetConfig(std::string ip, std::string gateway, std::string mask)
 	{
-		Nvilidar_NetConfigTypeDef net_cfg;
-
 		//建立连接  
 		bool state = lidar_net_cfg.LidarNetConfigConnect();
 		if (false == state)

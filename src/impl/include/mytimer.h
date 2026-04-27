@@ -24,7 +24,7 @@
 	//get current ms 
 	inline uint64_t getMS(void)
 	{
-		return GetTickCount();
+		return GetTickCount64();
 	}
 
 	//dalay for some time 

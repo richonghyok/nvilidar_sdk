@@ -135,8 +135,8 @@ namespace nvilidar
 			//---------------------thread---------------------------
 			#if defined(_WIN32)
 				HANDLE  _thread = NULL;
-				HANDLE  _event_analysis;		
-				HANDLE  _event_circle;			
+				HANDLE  _event_analysis = NULL;		
+				HANDLE  _event_circle = NULL;			
 
 				DWORD static WINAPI periodThread(LPVOID lpParameter);		//thread  
 			#else 

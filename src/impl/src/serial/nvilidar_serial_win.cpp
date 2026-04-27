@@ -72,7 +72,7 @@ namespace nvilidar_serial
 
             if (serialHandle != INVALID_HANDLE_VALUE)
             {
-				printf("handle ok 1:%d\n", serialHandle);
+				//printf("handle ok 1:%d\n", serialHandle);
 
                 // get default parameter
                 GetCommConfig(serialHandle, &serialConfig, &serialconfigSize);

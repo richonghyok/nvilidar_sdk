@@ -1776,6 +1776,7 @@ namespace nvilidar
 		//等待解锁  即一圈点数据完成了  
 		#if	defined(_WIN32)
 			DWORD state;
+			std::vector<Nvilidar_Node_Info> node_in;
 			ResetEvent(_event_circle);		// 重置事件，让其他线程继续等待（相当于获取锁）
 			state = WaitForSingleObject(_event_circle, timeout);
 			if (state == WAIT_OBJECT_0){

@@ -6,6 +6,7 @@
 #include <sstream>
 #include <math.h>
 #include <numeric>
+#include <cmath>
 
 namespace nvilidar
 {
@@ -149,9 +150,9 @@ namespace nvilidar
 	//滑动滤波
 	bool LidarFilter::LidarSlidingFilter(SlidingFilterPara para,std::vector<Nvilidar_Node_Info> in,std::vector<Nvilidar_Node_Info> &out){
 		std::vector<double>  filter_buf;      //滤波器buf
-		double  filter_out;         //滤波器输出
-		uint8_t filter_num;         //滑动窗口3个
-		int16_t filter_error;       //滤波修正误差范围阈值
+		double  filter_out = 0.0;         //滤波器输出
+		uint8_t filter_num = 0;         //滑动窗口3个
+		int16_t filter_error = 0;       //滤波修正误差范围阈值
 
 		filter_buf.resize(para.window);     //window
 		out = in;
